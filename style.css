@@ -17,11 +17,11 @@
 	--bg: rgb(249 249 255);
 	--icons-bg: rgba(144, 172, 209, 0.2);
 	--gradient: linear-gradient(0deg, rgb(132 144 250) 0%, rgb(98 189 252) 100%);
-	--gradientSupport: -webkit-linear-gradient(0deg, rgb(132 144 155) 0%,
+	--gradientSupport: -webkit-linear-gradient(45deg, #980093 0%,
 		rgb(98 189 252) 100%
 	);
 	--shadow:  0px 0px 20px 0px rgb(132 144 255 / 20%);
-	--shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+	--shadowSupport: 0px 25px 20px 0px rgb(132 144 255 / 40%);
 }
 html{
 	font-size: 62.5%;
@@ -60,7 +60,7 @@ li{
 .header{
 	padding: 0 4rem;
 	height: 8rem;
-	background-color: var(--bg);
+	background: linear-gradient(160deg, rgb(98 189 252) 0%, #7c2090 100%);											
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -79,14 +79,15 @@ li{
 	display: inline-block;
 	font-size: 1.8rem;
 	font-weight: 500;
-	color: var(--black);
+	color: var(--white);
 	text-transform: uppercase;
 	/*font-family: 'Poppins', sans-serif;*/
 	transition: color .3s linear;
 }
 .navbar-link:hover,
 .navbar-link:active{
-	color: var(--helper);
+	color: #02c0c2;
+	/*color: var(--helper);*/
 }
 .mobile-navbar-btn{
 	display: none;
@@ -185,11 +186,13 @@ li{
 	font-size: 6.5rem;
 }
 .hero-heading span{
-	color: #6f156d;
+	color: #7d0179;
 }
 .hero-para{
 	margin-top: 1.5rem;
 	margin-bottom: 5rem;
+	line-height: 2rem;
+	letter-spacing: .2rem;
 	max-width: 60rem;
 }
 .section-hero-image{
@@ -198,7 +201,7 @@ li{
 	align-items: center;
 }
 .hero-img{
-	max-width: 85%;
+	max-width: 90%;
 	margin-left: 3rem;
 	border-top-left-radius: 3rem;
 	border-bottom-left-radius: 9rem;
@@ -804,6 +807,9 @@ li{
 	.section-hero .grid-two-column{
 		grid-template-columns: 1fr;
 	}
+	.section-hero .container{
+		padding-left: 2rem;	
+	}
 	.section-hero-data{
 		align-items: center;
 	}
@@ -819,6 +825,25 @@ li{
 	}
 	.section-work-data .grid-four-column{
 		grid-template-columns: repeat(2, 1fr);
+		margin-left: 3.6rem;
+	}
+	.section-services .container{
+		padding: 0;
+	}
+	.section-services .grid-three-column{
+		grid-template-columns: 1fr;
+	}
+	.section-services .service-box p{
+		margin-left: 7rem;
+	}
+	.section-testimonial .container{
+		padding: 0;
+	}
+	.section-freelanching .container{
+		padding: 0;
+	}
+	.section-freelanching h2{
+		font-size: 4rem;
 	}
 	.section-biodata .grid-two-column{
 		grid-template-columns: 1fr;
@@ -850,5 +875,15 @@ li{
 	.section-footer .f-about,
 	.section-footer .f-address{
 		grid-column: 1/-1;
+	}
+.section-footer .container{
+		padding: 0;
+	}
+	.section-footer .grid-four-column{
+		/*grid-template-columns: 1fr;*/
+		gap: .5rem;
+	}
+	.section-footer .grid-four-column p, a{
+		font-size: 1.5rem;
 	}
 }
